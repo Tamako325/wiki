@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Codex 接入中转站使用 GPT 教程</title>
+    <meta
+      name="description"
+      content="从注册 WaterHill 中转站、配置 CC Switch，到下载 Codex 的完整 Wiki 教程。"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="topbar" aria-label="页面导航">
+        <a class="brand" href="#top" aria-label="返回顶部">
+          <span class="brand-mark" aria-hidden="true">W</span>
+          <span>Codex GPT Wiki</span>
+        </a>
+        <div class="nav-links">
+          <a href="#waterhill">注册中转站</a>
+          <a href="#ccswitch">下载 CC Switch</a>
+          <a href="#codex">下载 Codex</a>
+        </div>
+      </nav>
+
+      <section class="hero" id="top">
+        <div class="hero-copy">
+          <p class="eyebrow">WaterHill + CC Switch + Codex</p>
+          <h1>Codex 接入中转站使用 GPT 教程</h1>
+          <p class="hero-text">
+            按照下面三步完成配置：先在中转站创建 GPT 分组密钥，再用 CC Switch
+            添加 OpenAI 兼容供应商，最后安装 Codex 并切换到刚配置好的供应商。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button" href="https://www.waterhill.cyou/" target="_blank" rel="noreferrer">
+              打开中转站
+            </a>
+            <a class="secondary-button" href="#quick-reference">查看参数</a>
+          </div>
+        </div>
+
+        <aside class="workflow-panel" aria-labelledby="workflow-title">
+          <h2 class="visually-hidden" id="workflow-title">配置流程概览</h2>
+          <img
+            class="workflow-image"
+            src="assets/codex-gpt-flow.png"
+            width="1280"
+            height="860"
+            alt="Codex 接入 GPT 中转站流程图：先注册 WaterHill 创建 GPT 分组密钥，再配置 CC Switch，最后安装 Codex 并选择 gpt-5.5 供应商。"
+          >
+          <div class="workflow-step">
+            <span class="step-number">1</span>
+            <div>
+              <strong>WaterHill</strong>
+              <span>创建 GPT 分组 API 密钥</span>
+            </div>
+          </div>
+          <div class="connector" aria-hidden="true"></div>
+          <div class="workflow-step">
+            <span class="step-number">2</span>
+            <div>
+              <strong>CC Switch</strong>
+              <span>添加 OpenAI 兼容供应商</span>
+            </div>
+          </div>
+          <div class="connector" aria-hidden="true"></div>
+          <div class="workflow-step">
+            <span class="step-number">3</span>
+            <div>
+              <strong>Codex</strong>
+              <span>安装后使用该供应商</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+    </header>
+
+    <main>
+      <section class="section intro-section" aria-labelledby="before-start">
+        <div class="section-heading">
+          <p class="eyebrow">开始前</p>
+          <h2 id="before-start">你需要准备什么</h2>
+        </div>
+        <div class="note-grid">
+          <article class="note">
+            <h3>一个可访问的浏览器</h3>
+            <p>用于注册中转站、下载 CC Switch，以及打开 Microsoft Store 页面。</p>
+          </article>
+          <article class="note">
+            <h3>一个安全保存密钥的位置</h3>
+            <p>API 密钥创建后建议立即保存，不要公开发送给他人。</p>
+          </article>
+          <article class="note">
+            <h3>Windows 设备</h3>
+            <p>本教程的 Codex 下载入口使用 Microsoft Store 链接，适合 Windows 用户。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section guide-section" id="waterhill" aria-labelledby="waterhill-title">
+        <div class="section-heading sticky-heading">
+          <p class="eyebrow">第一部分</p>
+          <h2 id="waterhill-title">注册 WaterHill 中转站</h2>
+          <a class="text-link" href="https://www.waterhill.cyou/" target="_blank" rel="noreferrer">
+            https://www.waterhill.cyou/
+          </a>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <span class="list-marker">1</span>
+            <div>
+              <h3>打开并注册网站</h3>
+              <p>
+                进入 WaterHill 中转站网址，按照页面提示完成注册。如果已经有账号，直接登录即可。
+              </p>
+              <figure class="step-figure">
+                <a href="assets/tutorial/waterhill-home-annotated.png" target="_blank" rel="noreferrer">
+                  <img
+                    src="assets/tutorial/waterhill-home-annotated.png"
+                    width="2499"
+                    height="900"
+                    alt="WaterHill 首页截图，箭头标出立即开始按钮和右上角登录入口。"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </a>
+                <figcaption>从首页进入后台，新用户点“立即开始”，已有账号点右上角登录。</figcaption>
+              </figure>
+            </div>
+          </li>
+          <li>
+            <span class="list-marker">2</span>
+            <div>
+              <h3>进入 API 密钥页面</h3>
+              <p>
+                登录后在左侧或顶部菜单中找到并点击 <strong>API 密钥</strong>。
+              </p>
+              <figure class="step-figure is-compact">
+                <a href="assets/tutorial/waterhill-menu-api-key-annotated.png" target="_blank" rel="noreferrer">
+                  <img
+                    src="assets/tutorial/waterhill-menu-api-key-annotated.png"
+                    width="271"
+                    height="661"
+                    alt="WaterHill 左侧菜单截图，箭头标出 API 密钥入口。"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </a>
+                <figcaption>进入后台后，在左侧菜单点击“API 密钥”。</figcaption>
+              </figure>
+            </div>
+          </li>
+          <li>
+            <span class="list-marker">3</span>
+            <div>
+              <h3>创建自己的密钥</h3>
+              <p>
+                点击创建密钥，名称可按用途填写，例如 <code>codex-gpt</code>。
+              </p>
+              <figure class="step-figure">
+                <a href="assets/tutorial/waterhill-keys-create-annotated.png" target="_blank" rel="noreferrer">
+                  <img
+                    src="assets/tutorial/waterhill-keys-create-annotated.png"
+                    width="2549"
+                    height="720"
+                    alt="WaterHill API 密钥页面截图，箭头标出创建密钥按钮和复制密钥的位置。"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </a>
+                <figcaption>在 API 密钥页面点击右上角“创建密钥”，创建后复制生成的密钥。</figcaption>
+              </figure>
+              <figure class="step-figure is-compact">
+                <a href="assets/tutorial/waterhill-create-key-modal-annotated.png" target="_blank" rel="noreferrer">
+                  <img
+                    src="assets/tutorial/waterhill-create-key-modal-annotated.png"
+                    width="510"
+                    height="636"
+                    alt="WaterHill 创建密钥弹窗截图，箭头标出名称、主分组和创建按钮。"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </a>
+                <figcaption>创建弹窗中先填写名称，再选择主分组，最后点击“创建”。</figcaption>
+              </figure>
+            </div>
+          </li>
+          <li>
+            <span class="list-marker">4</span>
+            <div>
+              <h3>分组选择 GPT</h3>
+              <p>
+                在分组选项中选择 <strong>GPT</strong>，然后保存并复制生成的 API 密钥。
+              </p>
+              <figure class="step-figure is-compact">
+                <a href="assets/tutorial/waterhill-group-gpt-annotated.png" target="_blank" rel="noreferrer">
+                  <img
+                    src="assets/tutorial/waterhill-group-gpt-annotated.png"
+                    width="260"
+                    height="422"
+                    alt="WaterHill 分组下拉菜单截图，箭头标出 GPT 相关分组。"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </a>
+                <figcaption>主分组选择 GPT 相关分组，例如截图中的“GPT-混合”。</figcaption>
+              </figure>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section guide-section" id="ccswitch" aria-labelledby="ccswitch-title">
+        <div class="section-heading sticky-heading">
+          <p class="eyebrow">第二部分</p>
+          <h2 id="ccswitch-title">下载并配置 CC Switch</h2>
+          <div class="link-stack">
+            <a class="text-link" href="https://www.ccswitch.io/zh/" target="_blank" rel="noreferrer">
+              官网下载
+            </a>
+            <a
+              class="text-link"
+              href="https://github.com/farion1231/cc-switch/releases"
+              target="_blank"
+              rel="noreferrer"
+            >
+              GitHub Releases 备用下载
+            </a>
+          </div>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <span class="list-marker">1</span>
+            <div>
+              <h3>下载 CC Switch</h3>
+              <p>
+                优先打开 CC Switch 官网下载。如果官网无法下载，打开 GitHub Releases 页面，选择适合
+                Windows 的安装包或压缩包。
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="list-marker">2</span>
+            <div>
+              <h3>安装并进入 OpenAI 配置界面</h3>
+              <p>
+                打开 CC Switch，在 OpenAI 或 Codex 相关配置界面中选择添加供应商。
+              </p>
+              <figure class="step-figure">
+                <a href="assets/tutorial/ccswitch-provider-list-annotated.png" target="_blank" rel="noreferrer">
+                  <img
+                    src="assets/tutorial/ccswitch-provider-list-annotated.png"
+                    width="902"
+                    height="632"
+                    alt="CC Switch 供应商列表截图，箭头标出右上角添加按钮和保存后的 WaterHill 供应商。"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </a>
+                <figcaption>点击右上角“+”添加供应商，保存成功后列表中会出现 WaterHill 配置。</figcaption>
+              </figure>
+            </div>
+          </li>
+          <li>
+            <span class="list-marker">3</span>
+            <div>
+              <h3>添加供应商参数</h3>
+              <p>
+                名称可以自己填写，API 请求地址填写 <code>https://www.waterhill.cyou/v1</code>，
+                密钥填写第一部分创建的 WaterHill API 密钥。
+              </p>
+              <figure class="step-figure">
+                <a href="assets/tutorial/ccswitch-edit-provider-annotated.png" target="_blank" rel="noreferrer">
+                  <img
+                    src="assets/tutorial/ccswitch-edit-provider-annotated.png"
+                    width="902"
+                    height="632"
+                    alt="CC Switch 编辑供应商页面截图，箭头标出 API Key、API 请求地址、模型名称和保存按钮。"
+                    loading="lazy"
+                    decoding="async"
+                  >
+                </a>
+                <figcaption>把 WaterHill 密钥粘贴到 API Key，API 请求地址填写 <code>https://www.waterhill.cyou/v1</code>。</figcaption>
+              </figure>
+            </div>
+          </li>
+          <li>
+            <span class="list-marker">4</span>
+            <div>
+              <h3>选择 GPT 5.5</h3>
+              <p>
+                在供应商或模型选项中选择 <strong>gpt-5.5</strong>，保存后将该配置设为当前使用项。
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section guide-section" id="codex" aria-labelledby="codex-title">
+        <div class="section-heading sticky-heading">
+          <p class="eyebrow">第三部分</p>
+          <h2 id="codex-title">下载 Codex</h2>
+          <a
+            class="text-link"
+            href="https://apps.microsoft.com/detail/9plm9xgg6vks?hl=zh-CN&amp;gl=CN"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Microsoft Store 下载页
+          </a>
+        </div>
+
+        <ol class="steps">
+          <li>
+            <span class="list-marker">1</span>
+            <div>
+              <h3>从 Microsoft Store 搜索安装</h3>
+              <p>
+                打开 Microsoft Store，搜索 <strong>Codex</strong>，找到应用后点击获取或安装。
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="list-marker">2</span>
+            <div>
+              <h3>也可以直接打开下载链接</h3>
+              <p>
+                如果搜索不方便，直接打开上方 Microsoft Store 下载页，并按商店提示完成安装。
+              </p>
+            </div>
+          </li>
+          <li>
+            <span class="list-marker">3</span>
+            <div>
+              <h3>确认 Codex 使用 CC Switch 配置</h3>
+              <p>
+                安装完成后打开 Codex，回到 CC Switch 选择刚才添加的供应商，之后 Codex
+                的 GPT 请求会走 WaterHill 中转站地址。
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="section reference-section" id="quick-reference" aria-labelledby="reference-title">
+        <div class="section-heading">
+          <p class="eyebrow">参数速查</p>
+          <h2 id="reference-title">CC Switch 填写内容</h2>
+        </div>
+        <table class="reference-table">
+          <thead>
+            <tr>
+              <th scope="col">字段</th>
+              <th scope="col">填写内容</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">名称</th>
+              <td>自定义，例如 <code>WaterHill GPT</code></td>
+            </tr>
+            <tr>
+              <th scope="row">API 请求地址</th>
+              <td><code>https://www.waterhill.cyou/v1</code></td>
+            </tr>
+            <tr>
+              <th scope="row">API 密钥</th>
+              <td>WaterHill 网站 API 密钥页面创建的密钥</td>
+            </tr>
+            <tr>
+              <th scope="row">分组</th>
+              <td>GPT</td>
+            </tr>
+            <tr>
+              <th scope="row">供应商或模型</th>
+              <td><code>gpt-5.5</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="section tips-section" aria-labelledby="tips-title">
+        <div class="section-heading">
+          <p class="eyebrow">检查清单</p>
+          <h2 id="tips-title">配置完成后确认三件事</h2>
+        </div>
+        <div class="checklist">
+          <label>
+            <input type="checkbox">
+            WaterHill 已创建 GPT 分组的 API 密钥
+          </label>
+          <label>
+            <input type="checkbox">
+            CC Switch 已保存 <code>https://www.waterhill.cyou/v1</code>
+          </label>
+          <label>
+            <input type="checkbox">
+            Codex 已安装，并在 CC Switch 中切换到新供应商
+          </label>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>本页为内部 Wiki 教程，请妥善保管自己的 API 密钥。</p>
+    </footer>
+  </body>
+</html>
