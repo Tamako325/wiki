@@ -190,7 +190,7 @@ p {
 
 .docs-main {
   margin: 0 auto;
-  max-width: 1180px;
+  max-width: 1040px;
   padding: 56px 44px 80px;
   width: 100%;
 }
@@ -401,25 +401,6 @@ p {
   width: 100%;
 }
 
-.step-figure.is-wide a {
-  background: #101214;
-  border: 1px solid var(--line);
-  border-radius: 9px;
-  box-shadow: var(--shadow);
-  overflow-x: auto;
-  padding: 0;
-  width: 100%;
-}
-
-.step-figure.is-wide img {
-  border: 0;
-  border-radius: 0;
-  box-shadow: none;
-  max-height: none;
-  max-width: none;
-  width: 1600px;
-}
-
 .step-figure.is-diagram img {
   max-height: none;
   max-width: min(100%, 980px);
@@ -589,11 +570,6 @@ p {
     max-height: none;
     max-width: 100%;
     width: 100%;
-  }
-
-  .step-figure.is-wide img {
-    max-width: none;
-    width: 1180px;
   }
 
   .reference-table,
