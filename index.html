@@ -33,7 +33,6 @@
         <nav class="sidebar-nav" aria-label="章节目录">
           <p class="nav-group">开始</p>
           <a href="#overview" data-page-link="overview" aria-current="page">概览</a>
-          <a href="#prepare" data-page-link="prepare">准备事项</a>
 
           <p class="nav-group">第一部分</p>
           <a href="#waterhill-home" data-page-link="waterhill-home">注册中转站</a>
@@ -47,8 +46,6 @@
           <p class="nav-group">第三部分</p>
           <a href="#codex" data-page-link="codex">下载 Codex</a>
           <a href="#codex-start" data-page-link="codex-start">开始使用</a>
-          <a href="#reference" data-page-link="reference">参数速查</a>
-          <a href="#checklist" data-page-link="checklist">检查清单</a>
         </nav>
       </aside>
 
@@ -78,25 +75,6 @@
                 <li><strong>Codex</strong><span>安装后使用该供应商</span></li>
               </ol>
             </div>
-          </div>
-        </section>
-
-        <section class="doc-page" id="prepare" data-page="prepare" aria-labelledby="prepare-title">
-          <p class="eyebrow">开始前</p>
-          <h2 id="prepare-title">你需要准备什么</h2>
-          <div class="note-grid">
-            <article class="note">
-              <h3>一个可访问的浏览器</h3>
-              <p>用于注册中转站、下载 CC Switch，以及打开 Microsoft Store 页面。</p>
-            </article>
-            <article class="note">
-              <h3>一个安全保存密钥的位置</h3>
-              <p>API 密钥创建后建议立即保存，不要公开发送给他人。</p>
-            </article>
-            <article class="note">
-              <h3>Windows 设备</h3>
-              <p>本教程的 Codex 下载入口使用 Microsoft Store 链接，适合 Windows 用户。</p>
-            </article>
           </div>
         </section>
 
@@ -389,59 +367,6 @@
           </figure>
         </section>
 
-        <section class="doc-page" id="reference" data-page="reference" aria-labelledby="reference-title">
-          <p class="eyebrow">参数速查</p>
-          <h2 id="reference-title">CC Switch 填写内容</h2>
-          <table class="reference-table">
-            <thead>
-              <tr>
-                <th scope="col">字段</th>
-                <th scope="col">填写内容</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">名称</th>
-                <td>自定义，例如 <code>WaterHill GPT</code></td>
-              </tr>
-              <tr>
-                <th scope="row">API 请求地址</th>
-                <td><code>https://www.waterhill.cyou/v1</code></td>
-              </tr>
-              <tr>
-                <th scope="row">API 密钥</th>
-                <td>WaterHill 网站 API 密钥页面创建的密钥</td>
-              </tr>
-              <tr>
-                <th scope="row">分组</th>
-                <td><code>GPTfree</code> 和 <code>混合</code></td>
-              </tr>
-              <tr>
-                <th scope="row">供应商或模型</th>
-                <td><code>gpt-5.5</code></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <section class="doc-page" id="checklist" data-page="checklist" aria-labelledby="checklist-title">
-          <p class="eyebrow">检查清单</p>
-          <h2 id="checklist-title">配置完成后确认三件事</h2>
-          <div class="checklist">
-            <label>
-              <input type="checkbox">
-              WaterHill 已创建 GPT 分组的 API 密钥
-            </label>
-            <label>
-              <input type="checkbox">
-              CC Switch 已保存 <code>https://www.waterhill.cyou/v1</code> 并连接测试通过
-            </label>
-            <label>
-              <input type="checkbox">
-              Codex 已安装，可以输入任务并开始对话
-            </label>
-          </div>
-        </section>
       </main>
     </div>
 
