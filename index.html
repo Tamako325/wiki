@@ -34,18 +34,24 @@
           <p class="nav-group">开始</p>
           <a href="#overview" data-page-link="overview" aria-current="page">概览</a>
 
-          <p class="nav-group">第一部分</p>
+          <p class="nav-group">接入教程</p>
+          <p class="nav-subgroup">第一部分</p>
           <a href="#waterhill-home" data-page-link="waterhill-home">注册中转站</a>
           <a href="#waterhill-key" data-page-link="waterhill-key">创建并复制密钥</a>
 
-          <p class="nav-group">第二部分</p>
+          <p class="nav-subgroup">第二部分</p>
           <a href="#ccswitch-download" data-page-link="ccswitch-download">下载 CC Switch</a>
           <a href="#ccswitch-provider" data-page-link="ccswitch-provider">添加并填写供应商</a>
           <a href="#ccswitch-test" data-page-link="ccswitch-test">连接测试</a>
 
-          <p class="nav-group">第三部分</p>
+          <p class="nav-subgroup">第三部分</p>
           <a href="#codex" data-page-link="codex">下载 Codex</a>
           <a href="#codex-start" data-page-link="codex-start">开始使用</a>
+
+          <p class="nav-group">优化使用体验</p>
+          <a href="#optimize-language" data-page-link="optimize-language">中文修改</a>
+          <a href="#optimize-approval" data-page-link="optimize-approval">权限批准</a>
+          <a href="#optimize-skills" data-page-link="optimize-skills">Skill 和插件使用</a>
         </nav>
       </aside>
 
@@ -365,6 +371,72 @@
             </a>
             <figcaption>在输入框输入任务，可按需要选择项目，最后点击发送开始。</figcaption>
           </figure>
+        </section>
+
+        <section class="doc-page" id="optimize-language" data-page="optimize-language" aria-labelledby="optimize-language-title">
+          <p class="eyebrow">优化使用体验</p>
+          <h2 id="optimize-language-title">中文修改</h2>
+          <p class="lead">
+            如果希望 Codex 的回答更符合中文使用习惯，可以在新对话开始时直接说明：请使用中文回复，并保持步骤清晰、用词简洁。
+          </p>
+          <div class="step-block">
+            <div class="step-number">1</div>
+            <div>
+              <h3>在任务开头写清语言要求</h3>
+              <p>例如输入“后续请使用中文回答，并把操作步骤写清楚”。这样后面的解释、总结和修改说明都会更适合中文阅读。</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-number">2</div>
+            <div>
+              <h3>需要更细的风格时继续补充</h3>
+              <p>可以追加“少用英文术语”“保留命令和文件名原文”“最终回复短一点”等要求，让输出风格更稳定。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-page" id="optimize-approval" data-page="optimize-approval" aria-labelledby="optimize-approval-title">
+          <p class="eyebrow">优化使用体验</p>
+          <h2 id="optimize-approval-title">权限批准</h2>
+          <p class="lead">
+            Codex 在执行文件修改、联网、安装依赖或运行命令时，可能会根据环境设置请求批准。遇到批准提示时，先确认操作内容再继续。
+          </p>
+          <div class="step-block">
+            <div class="step-number">1</div>
+            <div>
+              <h3>确认命令用途</h3>
+              <p>重点看它要访问的网站、要修改的文件、要运行的命令是否符合当前教程目标。</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-number">2</div>
+            <div>
+              <h3>只批准看得懂的操作</h3>
+              <p>如果不确定，可以先让 Codex 解释命令用途，再决定是否批准。涉及密钥、账户、删除文件的操作尤其要谨慎。</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-page" id="optimize-skills" data-page="optimize-skills" aria-labelledby="optimize-skills-title">
+          <p class="eyebrow">优化使用体验</p>
+          <h2 id="optimize-skills-title">Skill 和插件使用</h2>
+          <p class="lead">
+            Skill 和插件可以让 Codex 更擅长处理特定任务，例如文档、表格、演示文稿、图片或项目脚手架。需要时可以直接在任务里点名使用。
+          </p>
+          <div class="step-block">
+            <div class="step-number">1</div>
+            <div>
+              <h3>什么时候使用 Skill</h3>
+              <p>当任务有明确类型时可以直接说，例如“使用文档 Skill 帮我整理 Word 文件”或“使用表格 Skill 分析 Excel”。</p>
+            </div>
+          </div>
+          <div class="step-block">
+            <div class="step-number">2</div>
+            <div>
+              <h3>什么时候使用插件</h3>
+              <p>插件适合扩展 Codex 的工作流。安装或启用后，可以在同一个对话中让 Codex 调用对应能力完成更专门的操作。</p>
+            </div>
+          </div>
         </section>
 
       </main>
