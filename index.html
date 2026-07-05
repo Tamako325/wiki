@@ -42,6 +42,7 @@
           <p class="nav-subgroup">第二部分</p>
           <a href="#ccswitch-download" data-page-link="ccswitch-download">下载 CC Switch</a>
           <a href="#ccswitch-provider" data-page-link="ccswitch-provider">添加并填写供应商</a>
+          <a href="#ccswitch-models" data-page-link="ccswitch-models">选择模型</a>
           <a href="#ccswitch-test" data-page-link="ccswitch-test">连接测试</a>
 
           <p class="nav-subgroup">第三部分</p>
@@ -256,38 +257,73 @@
           <p class="eyebrow">第二部分</p>
           <h2 id="ccswitch-provider-title">添加供应商并填写参数</h2>
           <p class="lead">
-            打开 CC Switch，在 OpenAI 或 Codex 相关配置界面中点击右上角“+”添加供应商。名称可以自己填写，
+            打开 CC Switch，先确认位于 OpenAI 界面，再点击右上角“+”添加供应商。名称可以自己填写，
             API 请求地址填写 <code>https://www.waterhill.cyou/v1</code>，密钥填写第一部分创建的 WaterHill API 密钥，
-            模型名称填写 <code>gpt-5.5</code>，官方链接不用填写。
+            官方链接不用填写。
           </p>
           <figure class="step-figure">
             <a href="assets/tutorial/ccswitch-provider-list-annotated.png" target="_blank" rel="noreferrer">
               <img
                 src="assets/tutorial/ccswitch-provider-list-annotated.png"
-                width="902"
-                height="632"
-                alt="CC Switch 供应商列表截图，箭头标出右上角添加按钮。"
+                width="1356"
+                height="950"
+                alt="CC Switch 供应商列表截图，箭头标出 OpenAI 界面和右上角添加按钮。"
                 loading="lazy"
                 decoding="async"
               >
             </a>
-            <figcaption>点击右上角“+”添加供应商。</figcaption>
+            <figcaption>确保在 OpenAI 界面中操作，然后点击右上角“+”添加供应商。</figcaption>
           </figure>
           <figure class="step-figure">
             <a href="assets/tutorial/ccswitch-edit-provider-annotated.png" target="_blank" rel="noreferrer">
               <img
                 src="assets/tutorial/ccswitch-edit-provider-annotated.png"
-                width="902"
-                height="632"
-                alt="CC Switch 编辑供应商页面截图，箭头标出官方链接、API Key、API 请求地址、模型名称和保存按钮。"
+                width="1356"
+                height="950"
+                alt="CC Switch 编辑供应商页面截图，箭头标出名称、官方链接、API Key、API 请求地址和保存按钮。"
                 loading="lazy"
                 decoding="async"
               >
             </a>
             <figcaption>
               把 WaterHill 密钥粘贴到 API Key，API 请求地址填写 <code>https://www.waterhill.cyou/v1</code>，
-              模型填写 <code>gpt-5.5</code>；“官方链接”不用填写，完成后保存。
+              “官方链接”不用填写，完成后保存。
             </figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-page" id="ccswitch-models" data-page="ccswitch-models" aria-labelledby="ccswitch-models-title">
+          <p class="eyebrow">第二部分</p>
+          <h2 id="ccswitch-models-title">选择模型</h2>
+          <p class="lead">
+            供应商参数保存后，展开高级选项，在“模型映射”区域先点击“获取模型列表”，再点击“添加模型”，并按示例添加
+            <code>gpt-5.5</code>。
+          </p>
+          <figure class="step-figure">
+            <a href="assets/tutorial/ccswitch-model-select-annotated.png" target="_blank" rel="noreferrer">
+              <img
+                src="assets/tutorial/ccswitch-model-select-annotated.png"
+                width="1356"
+                height="950"
+                alt="CC Switch 高级选项截图，箭头标出获取模型列表和添加模型按钮。"
+                loading="lazy"
+                decoding="async"
+              >
+            </a>
+            <figcaption>在模型映射区域，先点击“获取模型列表”，再点击“添加模型”。</figcaption>
+          </figure>
+          <figure class="step-figure">
+            <a href="assets/tutorial/ccswitch-model-gpt55.png" target="_blank" rel="noreferrer">
+              <img
+                src="assets/tutorial/ccswitch-model-gpt55.png"
+                width="1201"
+                height="145"
+                alt="CC Switch 模型映射截图，显示菜单显示名和实际请求模型均为 gpt-5.5，上下文窗口为 12800。"
+                loading="lazy"
+                decoding="async"
+              >
+            </a>
+            <figcaption>添加模型时，菜单显示名和实际请求模型填写 <code>gpt-5.5</code>，上下文窗口可保持 <code>12800</code>。</figcaption>
           </figure>
         </section>
 
