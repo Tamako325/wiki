@@ -161,10 +161,17 @@ p {
 }
 
 .nav-group {
-  color: var(--muted);
-  font-size: 0.78rem;
+  background: var(--teal-dark);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 0.8rem;
   font-weight: 800;
-  margin: 18px 10px 6px;
+  margin: 18px 0 6px;
+  padding: 7px 10px;
+}
+
+.nav-group:first-child {
+  margin-top: 0;
 }
 
 .nav-subgroup {
