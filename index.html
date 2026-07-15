@@ -41,7 +41,9 @@
 
           <p class="nav-subgroup">第二部分</p>
           <a href="#ccswitch-download" data-page-link="ccswitch-download">下载 CC Switch</a>
-          <a href="#ccswitch-provider" data-page-link="ccswitch-provider">添加并填写供应商</a>
+          <p class="nav-topic">添加并填写供应商</p>
+          <a class="nav-child" href="#ccswitch-quick-import" data-page-link="ccswitch-quick-import">一键导入</a>
+          <a class="nav-child" href="#ccswitch-manual-import" data-page-link="ccswitch-manual-import">手动导入</a>
 
           <p class="nav-subgroup">第三部分</p>
           <a href="#codex" data-page-link="codex">下载 Codex</a>
@@ -97,7 +99,7 @@
                 width="2554"
                 height="1475"
                 alt="WaterHill 首页截图，箭头标出立即开始按钮和右上角登录入口。"
-                loading="lazy"
+                  loading="eager"
                 decoding="async"
               >
             </a>
@@ -110,7 +112,7 @@
                 width="980"
                 height="773"
                 alt="WaterHill 登录页面截图，箭头标出已有账号登录按钮和没有账号时点击注册入口，提示优惠码可不填。"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
               >
             </a>
@@ -230,7 +232,7 @@
                 width="2560"
                 height="1444"
                 alt="CC Switch 官网截图，箭头标出免费下载按钮。"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
               >
             </a>
@@ -243,7 +245,7 @@
                 width="2560"
                 height="1468"
                 alt="CC Switch GitHub Releases 截图，箭头标出 Windows Portable 压缩包。"
-                loading="lazy"
+                loading="eager"
                 decoding="async"
               >
             </a>
@@ -251,68 +253,79 @@
           </figure>
         </section>
 
-        <section class="doc-page" id="ccswitch-provider" data-page="ccswitch-provider" aria-labelledby="ccswitch-provider-title">
+        <section class="doc-page" id="ccswitch-quick-import" data-page="ccswitch-quick-import" aria-labelledby="ccswitch-quick-import-title">
           <p class="eyebrow">第二部分</p>
-          <h2 id="ccswitch-provider-title">添加供应商并填写参数</h2>
+          <h2 id="ccswitch-quick-import-title">一键导入</h2>
           <p class="lead">
-            可以选择一键导入或手动导入。一键导入会直接把 WaterHill 密钥带入 CC Switch；需要自定义参数时，再使用手动导入。
+            一键导入会将 WaterHill 密钥和服务地址直接带入 CC Switch，无需手动填写参数。
           </p>
-          <div class="tutorial-subsection">
-            <h3>一键导入</h3>
-            <p>
-              打开 WaterHill 的 API 密钥列表，找到要使用的密钥，在操作栏点击“导入到 CCS”。导入完成后，回到 CC Switch 即可看到对应供应商。
-            </p>
-            <figure class="step-figure">
-              <a href="assets/tutorial/waterhill-import-to-ccs-annotated.png" target="_blank" rel="noreferrer">
-                <img
-                  src="assets/tutorial/waterhill-import-to-ccs-annotated.png"
-                  width="2560"
-                  height="1600"
-                  alt="WaterHill API 密钥列表截图，箭头标出每个密钥操作栏里的导入到 CCS 按钮。"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </a>
-              <figcaption>在要使用的密钥后面点击“导入到 CCS”，即可一键导入。</figcaption>
-            </figure>
-          </div>
+          <p>
+            打开 WaterHill 的 API 密钥列表，找到要使用的密钥，在操作栏点击“导入到 CCS”。
+          </p>
+          <figure class="step-figure">
+            <a href="assets/tutorial/waterhill-import-to-ccs-annotated.png" target="_blank" rel="noreferrer">
+              <img
+                src="assets/tutorial/waterhill-import-to-ccs-annotated.png"
+                width="2560"
+                height="1600"
+                alt="WaterHill API 密钥列表截图，箭头标出每个密钥操作栏里的导入到 CCS 按钮。"
+                loading="eager"
+                decoding="async"
+              >
+            </a>
+            <figcaption>在要使用的密钥后面点击“导入到 CCS”。</figcaption>
+          </figure>
+          <p class="tutorial-followup">确认配置无误后，在弹窗右下角点击“导入”完成一键导入。</p>
+          <figure class="step-figure">
+            <a href="assets/tutorial/ccswitch-import-confirm-annotated.png" target="_blank" rel="noreferrer">
+              <img
+                src="assets/tutorial/ccswitch-import-confirm-annotated.png"
+                width="2034"
+                height="1404"
+                alt="CC Switch 确认导入供应商配置弹窗，箭头标出右下角导入按钮。"
+                loading="eager"
+                decoding="async"
+              >
+            </a>
+            <figcaption>点击“导入”后，供应商配置会自动加入 CC Switch。</figcaption>
+          </figure>
+        </section>
 
-          <div class="tutorial-subsection">
-            <h3>手动导入</h3>
-            <p>
-              打开 CC Switch，先确认位于 OpenAI 界面，再点击右上角“+”添加供应商。名称可以自己填写，API 请求地址填写
-              <code>https://www.waterhill.cyou/v1</code>，密钥填写第一部分创建的 WaterHill API 密钥，官方链接不用填写。
-            </p>
-            <figure class="step-figure">
-              <a href="assets/tutorial/ccswitch-provider-list-annotated.png" target="_blank" rel="noreferrer">
-                <img
-                  src="assets/tutorial/ccswitch-provider-list-annotated.png"
-                  width="1356"
-                  height="950"
-                  alt="CC Switch 供应商列表截图，箭头标出 OpenAI 界面和右上角添加按钮。"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </a>
-              <figcaption>确保在 OpenAI 界面中操作，然后点击右上角“+”添加供应商。</figcaption>
-            </figure>
-            <figure class="step-figure">
-              <a href="assets/tutorial/ccswitch-edit-provider-annotated.png" target="_blank" rel="noreferrer">
-                <img
-                  src="assets/tutorial/ccswitch-edit-provider-annotated.png"
-                  width="1356"
-                  height="950"
-                  alt="CC Switch 编辑供应商页面截图，箭头标出名称、官方链接、API Key、API 请求地址和保存按钮。"
-                  loading="lazy"
-                  decoding="async"
-                >
-              </a>
-              <figcaption>
-                把 WaterHill 密钥粘贴到 API Key，API 请求地址填写 <code>https://www.waterhill.cyou/v1</code>，
-                “官方链接”不用填写，完成后保存。
-              </figcaption>
-            </figure>
-          </div>
+        <section class="doc-page" id="ccswitch-manual-import" data-page="ccswitch-manual-import" aria-labelledby="ccswitch-manual-import-title">
+          <p class="eyebrow">第二部分</p>
+          <h2 id="ccswitch-manual-import-title">手动导入</h2>
+          <p class="lead">
+            需要自行填写供应商信息时，打开 CC Switch 的 OpenAI 界面，点击右上角“+”添加供应商。
+          </p>
+          <figure class="step-figure">
+            <a href="assets/tutorial/ccswitch-provider-list-annotated.png" target="_blank" rel="noreferrer">
+              <img
+                src="assets/tutorial/ccswitch-provider-list-annotated.png"
+                width="1356"
+                height="950"
+                alt="CC Switch 供应商列表截图，箭头标出 OpenAI 界面和右上角添加按钮。"
+                loading="eager"
+                decoding="async"
+              >
+            </a>
+            <figcaption>确保在 OpenAI 界面中操作，然后点击右上角“+”添加供应商。</figcaption>
+          </figure>
+          <p class="tutorial-followup">
+            名称可以自行填写；官网链接和 API 请求地址均填写 <code>https://www.waterhill.cyou/v1</code>；API Key 粘贴第一部分创建的 WaterHill 密钥。
+          </p>
+          <figure class="step-figure">
+            <a href="assets/tutorial/ccswitch-manual-edit-annotated.png" target="_blank" rel="noreferrer">
+              <img
+                src="assets/tutorial/ccswitch-manual-edit-annotated.png"
+                width="2034"
+                height="1404"
+                alt="CC Switch 编辑供应商页面截图，箭头标出名称、官网链接、API Key、API 请求地址和保存按钮。"
+                loading="eager"
+                decoding="async"
+              >
+            </a>
+            <figcaption>填写完成后，点击右下角“保存”。</figcaption>
+          </figure>
         </section>
 
         <section class="doc-page" id="codex" data-page="codex" aria-labelledby="codex-title">
@@ -456,7 +469,7 @@
           history.replaceState(null, "", `#${pageId}`);
         }
 
-        document.querySelector(".docs-main")?.scrollTo({ top: 0, behavior: "auto" });
+        window.scrollTo({ top: 0, behavior: "auto" });
       }
 
       links.forEach((link) => {
@@ -471,6 +484,9 @@
       });
 
       showPage(location.hash.replace("#", "") || "overview", false);
+      window.addEventListener("load", () => {
+        window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "auto" }));
+      });
     </script>
   </body>
 </html>
