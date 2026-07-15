@@ -255,39 +255,64 @@
           <p class="eyebrow">第二部分</p>
           <h2 id="ccswitch-provider-title">添加供应商并填写参数</h2>
           <p class="lead">
-            打开 CC Switch，先确认位于 OpenAI 界面，再点击右上角“+”添加供应商。名称可以自己填写，
-            API 请求地址填写 <code>https://www.waterhill.cyou/v1</code>，密钥填写第一部分创建的 WaterHill API 密钥，
-            官方链接不用填写。
+            可以选择一键导入或手动导入。一键导入会直接把 WaterHill 密钥带入 CC Switch；需要自定义参数时，再使用手动导入。
           </p>
-          <figure class="step-figure">
-            <a href="assets/tutorial/ccswitch-provider-list-annotated.png" target="_blank" rel="noreferrer">
-              <img
-                src="assets/tutorial/ccswitch-provider-list-annotated.png"
-                width="1356"
-                height="950"
-                alt="CC Switch 供应商列表截图，箭头标出 OpenAI 界面和右上角添加按钮。"
-                loading="lazy"
-                decoding="async"
-              >
-            </a>
-            <figcaption>确保在 OpenAI 界面中操作，然后点击右上角“+”添加供应商。</figcaption>
-          </figure>
-          <figure class="step-figure">
-            <a href="assets/tutorial/ccswitch-edit-provider-annotated.png" target="_blank" rel="noreferrer">
-              <img
-                src="assets/tutorial/ccswitch-edit-provider-annotated.png"
-                width="1356"
-                height="950"
-                alt="CC Switch 编辑供应商页面截图，箭头标出名称、官方链接、API Key、API 请求地址和保存按钮。"
-                loading="lazy"
-                decoding="async"
-              >
-            </a>
-            <figcaption>
-              把 WaterHill 密钥粘贴到 API Key，API 请求地址填写 <code>https://www.waterhill.cyou/v1</code>，
-              “官方链接”不用填写，完成后保存。
-            </figcaption>
-          </figure>
+          <div class="tutorial-subsection">
+            <h3>一键导入</h3>
+            <p>
+              打开 WaterHill 的 API 密钥列表，找到要使用的密钥，在操作栏点击“导入到 CCS”。导入完成后，回到 CC Switch 即可看到对应供应商。
+            </p>
+            <figure class="step-figure">
+              <a href="assets/tutorial/waterhill-import-to-ccs-annotated.png" target="_blank" rel="noreferrer">
+                <img
+                  src="assets/tutorial/waterhill-import-to-ccs-annotated.png"
+                  width="2560"
+                  height="1600"
+                  alt="WaterHill API 密钥列表截图，箭头标出每个密钥操作栏里的导入到 CCS 按钮。"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </a>
+              <figcaption>在要使用的密钥后面点击“导入到 CCS”，即可一键导入。</figcaption>
+            </figure>
+          </div>
+
+          <div class="tutorial-subsection">
+            <h3>手动导入</h3>
+            <p>
+              打开 CC Switch，先确认位于 OpenAI 界面，再点击右上角“+”添加供应商。名称可以自己填写，API 请求地址填写
+              <code>https://www.waterhill.cyou/v1</code>，密钥填写第一部分创建的 WaterHill API 密钥，官方链接不用填写。
+            </p>
+            <figure class="step-figure">
+              <a href="assets/tutorial/ccswitch-provider-list-annotated.png" target="_blank" rel="noreferrer">
+                <img
+                  src="assets/tutorial/ccswitch-provider-list-annotated.png"
+                  width="1356"
+                  height="950"
+                  alt="CC Switch 供应商列表截图，箭头标出 OpenAI 界面和右上角添加按钮。"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </a>
+              <figcaption>确保在 OpenAI 界面中操作，然后点击右上角“+”添加供应商。</figcaption>
+            </figure>
+            <figure class="step-figure">
+              <a href="assets/tutorial/ccswitch-edit-provider-annotated.png" target="_blank" rel="noreferrer">
+                <img
+                  src="assets/tutorial/ccswitch-edit-provider-annotated.png"
+                  width="1356"
+                  height="950"
+                  alt="CC Switch 编辑供应商页面截图，箭头标出名称、官方链接、API Key、API 请求地址和保存按钮。"
+                  loading="lazy"
+                  decoding="async"
+                >
+              </a>
+              <figcaption>
+                把 WaterHill 密钥粘贴到 API Key，API 请求地址填写 <code>https://www.waterhill.cyou/v1</code>，
+                “官方链接”不用填写，完成后保存。
+              </figcaption>
+            </figure>
+          </div>
         </section>
 
         <section class="doc-page" id="codex" data-page="codex" aria-labelledby="codex-title">
